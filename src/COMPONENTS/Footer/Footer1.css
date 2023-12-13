@@ -1,0 +1,34 @@
+.footer1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0px;
+  margin-top: 30px;
+  overflow: hidden;
+  background: rgba(236, 234, 234, 0.634);
+}
+.footer1 .left {
+  width: 45%;
+}
+
+.footer1 .left img {
+  width: 100%;
+}
+
+.footer1 .right {
+  width: 45%;
+}
+
+.footer1 .right h1 {
+  width: 50%;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.footer1 .right p {
+  width: 60%;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
