@@ -11,29 +11,29 @@ const HomeCategory = () => {
       <div className="container">
         <img src={clip1} alt="noimage" />
         <div className="content">
-          <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <h1>Vegitables at your doorstep</h1>
+          <p>Shop vegitables now</p>
         </div>
       </div>
       <div className="container">
         <img src={clip2} alt="noimage" />
         <div className="content">
-          <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <h1>Vegitables at your doorstep</h1>
+          <p>Shop vegitables now</p>
         </div>
       </div>
       <div className="container">
         <img src={clip3} alt="noimage" />
         <div className="content">
-          <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <h1>Vegitables at your doorstep</h1>
+          <p>Shop vegitables now</p>
         </div>
       </div>
       <div className="container">
         <img src={clip4} alt="noimage" />
         <div className="content">
-          <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <h1>Vegitables at your doorstep</h1>
+          <p>Shop vegitables now</p>
         </div>
       </div>
     </div>

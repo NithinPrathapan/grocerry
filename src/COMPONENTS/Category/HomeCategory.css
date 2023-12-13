@@ -7,8 +7,9 @@
   margin: 20px 0px;
 }
 .home-category .container {
-  width: 300px;
-  height: 300px;
+  width: 24%;
+  min-width: 300px;
+  height: 200px;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -42,11 +43,11 @@
 }
 
 .home-category .container:nth-child(1) {
-  background: #325f6c;
+  background: #339bb5;
   color: gray;
 }
 .home-category .container:nth-child(2) {
-  background: #0011ff;
+  background: #a23e9b;
   color: gray;
 }
 .home-category .container:nth-child(3) {
