@@ -5,6 +5,7 @@ import img1 from "../../Assets/Products/img1.jpg";
 import img2 from "../../Assets/Products/img2.jpg";
 import img3 from "../../Assets/Products/img3.jpg";
 import Navbar from "../../COMPONENTS/Navbar/Navbar";
+import Footer1 from "../../COMPONENTS/Footer/Footer1";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -241,6 +242,7 @@ const ProductPage = () => {
           <div className="desc">{productdata.ProductDescription}</div>
         )}
       </div>
+      <Footer1 />
     </div>
   );
 };
