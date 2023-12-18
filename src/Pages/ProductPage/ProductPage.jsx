@@ -12,7 +12,7 @@ const ProductPage = () => {
   const [productdata, setproductdata] = React.useState([]);
   const [activeimg, setactiveimg] = React.useState({});
   const [count, setCount] = React.useState(1);
-  const [showreview, setshowreview] = React.useState(false);
+  const [showreview, setshowreview] = React.useState(true);
 
   const getProductDataById = async () => {
     const temp = {
@@ -23,7 +23,7 @@ const ProductPage = () => {
           ProductId: 1,
           ProductName: "Crystal glass",
           ProductDescription:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
           ProductImage: [
             {
               id: 1,
@@ -175,6 +175,71 @@ const ProductPage = () => {
             <button>Buy Now</button>
           </div>
         </div>
+      </div>
+      <div className="pc2">
+        {showreview ? (
+          <div className="tabs">
+            <button
+              onClick={() => {
+                setshowreview(false);
+              }}
+              className="inactive"
+            >
+              Description
+            </button>
+            <button className="active">Review</button>
+          </div>
+        ) : (
+          <div className="tabs">
+            <button className="active">Descripion</button>
+            <button
+              onClick={() => {
+                setshowreview(true);
+              }}
+              className="inactive"
+            >
+              Review
+            </button>
+          </div>
+        )}
+        {showreview ? (
+          <div className="reviewcont">
+            <form action="">
+              <div className="formgroup">
+                <label htmlFor="">Name</label>
+                <input type="text" />
+              </div>
+              <div className="formgroup">
+                <label htmlFor="">Email</label>
+                <input type="text" />
+              </div>
+              <div className="formgroup">
+                <label htmlFor="">Review</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>{" "}
+              </div>
+              <button>Submit</button>
+            </form>
+            <div className="allreview">
+              <h1 className="head1">Product Reviews</h1>
+              {productdata.ProductReviews &&
+                productdata.ProductReviews.map((item, i) => {
+                  return (
+                    <div className="review">
+                      <div className="reviewhead">
+                        <p className="name">{item.Name}</p>
+                        <p className="date">
+                          <span>{item.Date}</span>
+                        </p>
+                      </div>
+                      <div className="reviewbody">{item.Review}</div>
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
+        ) : (
+          <div className="desc">{productdata.ProductDescription}</div>
+        )}
       </div>
     </div>
   );

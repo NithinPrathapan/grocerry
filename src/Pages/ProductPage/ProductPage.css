@@ -1,5 +1,4 @@
 .productpage .pc1 {
-  font-family: sans-serif;
   position: relative;
   padding-top: 5%;
   display: flex;
@@ -55,7 +54,7 @@
   flex-direction: column;
 }
 .productpage .pc1 .imgset img {
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   width: 100%;
   aspect-ratio: 1/1;
 }
@@ -154,4 +153,165 @@
 .productpage .c12 .cartsection button:hover {
   background: #000;
   color: var(--green);
+}
+
+/* product container 2 */
+.productpage .pc2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-self: center;
+}
+
+.productpage .pc2 .tabs {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}
+.productpage .pc2 .tabs .active {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--green);
+  cursor: pointer;
+  border-bottom: 2px solid var(--green);
+  margin: 0px 10px;
+  background: white;
+}
+
+.productpage .pc2 .tabs .inactive {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin: 0px 10px;
+  background: white;
+}
+
+.productpage .pc2 .reviewcont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.productpage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.productpage form .formgroup {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.productpage .reviewcont form div label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--green);
+}
+.productpage .reviewcont form input,
+.productpage .reviewcont form textarea {
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  border: 1px solid var(--green);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.productpage .reviewcont form textarea {
+  min-height: 100px;
+}
+
+.productpage .reviewcont button {
+  background: var(--green);
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.productpage .reviewcont button:hover {
+  background: #000;
+  color: var(--green);
+}
+
+.productpage .allreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  max-width: 700px;
+  margin-top: 50px;
+}
+.productpage .allreview .head1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--green);
+  font-weight: 400;
+  font-size: 25px;
+  color: var(--green);
+}
+
+.productpage .allreview .review {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+
+.productpage .reviewhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+.productpage .reviewhead p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  color: var(--green);
+}
+
+.productpage .reviewhead span {
+  background: var(--green);
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.productpage .reviewbody {
+  font-size: 14px;
+}
+
+.productpage .desc{
+  width: 70%;
+  max-width: 700px;
+  align-self: center;
+
 }
