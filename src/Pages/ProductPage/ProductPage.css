@@ -377,3 +377,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.productpage .slidercont{
+  width: 100%;
+  padding: 20px;
+}
