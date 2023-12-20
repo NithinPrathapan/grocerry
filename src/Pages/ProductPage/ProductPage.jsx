@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./ProductPage.css";
-import { Link, json, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import img1 from "../../Assets/Products/img1.jpg";
 import img2 from "../../Assets/Products/img2.jpg";
 import img3 from "../../Assets/Products/img3.jpg";
@@ -11,7 +11,6 @@ import clip1 from "../../Assets/images/clip1.png";
 import ProductSlider from "../../COMPONENTS/Product-slider/ProductSlider";
 
 const ProductPage = () => {
-  const { id } = useParams();
   const [imageset, setimageset] = React.useState([]);
   const [productdata, setproductdata] = React.useState([]);
   const [activeimg, setactiveimg] = React.useState({});

@@ -25,7 +25,7 @@ const ProductSlider = ({ products, categoryname }) => {
   };
   return (
     <div>
-      <h1>{categoryname}</h1>
+      <h6 className="sliderhead_category">{categoryname}</h6>
       <Carousel
         responsive={responsive}
         autoPlay={true}

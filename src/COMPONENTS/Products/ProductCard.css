@@ -48,7 +48,7 @@
 }
 
 .product-card .s2 h3 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   margin: 0;
   width: 90%;
@@ -58,12 +58,13 @@
   width: 30px;
   text-decoration: line-through;
   height: 30px;
+  margin: 0 0.5rem;
   color: gray;
 }
 
 .product-card .s2 p {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   margin: 0;
   width: 90%;
 }

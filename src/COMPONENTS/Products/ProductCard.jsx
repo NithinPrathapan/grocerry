@@ -12,9 +12,11 @@ const ProductCard = ({ data }) => {
       </div>
       <div className="s2">
         <h3>
-          $ {""}
-          {Math.floor(data.price - (data.price * data.discount) / 100)}
-          <span>{data.price}</span>
+          ${Math.floor(data.price - (data.price * data.discount) / 100)}
+          <span>
+            
+            {data.price}
+          </span>
         </h3>
         <p>{data.name}</p>
       </div>

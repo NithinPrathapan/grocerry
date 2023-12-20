@@ -1,0 +1,153 @@
+.extrapage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.pgleft img,
+.pgright img {
+  height: 50vh;
+}
+.pgleft {
+  display: flex;
+}
+.pgright {
+  display: flex;
+  flex-direction: row-reverse;
+  align-self: flex-end;
+}
+.pgcommon {
+  width: 80%;
+  margin: 80px 80px;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  padding: 20px;
+}
+.pgcommon div {
+  width: 45%;
+}
+
+.pgcommon div h1 {
+  font-size: 55px;
+  font-weight: 400;
+  color: var(--green);
+  margin: 0 0 10px 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+.pgcommon div p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2b2323;
+  padding: 0;
+}
+
+.extrapage svg {
+  width: 20px;
+}
+.extrapage form {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.extrapage .extrapageform {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.extrapage .extrapageform .formgroup {
+  width: 100%;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+.extrapage .extrapageform .formgroup input {
+  width: 100%;
+  height: 2rem;
+  margin-top: 5px;
+  border: 1px solid var(--green);
+}
+.extrapage .extrapageform label {
+  display: flex;
+  color: var(--green);
+  font-weight: 600;
+  margin-top: 5px;
+}
+.extrapage textarea {
+  height: 100px;
+  width: 100%;
+  border: 1px solid var(--green);
+}
+.extrapage .rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px 0px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transform: (-50%);
+}
+.extrapage .rating .starinactive {
+  color: lightgray;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.extrapage .rating .starinactive:hover {
+  color: var(--green);
+}
+
+.extrapage .rating .staractive {
+  color: gold;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  fill: gold;
+}
+/*  */
+.extrapage .rating1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 5px;
+}
+.extrapage .rating1 .starinactive {
+  color: lightgray;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.extrapage .rating1 .starinactive:hover {
+  color: var(--green);
+}
+
+.extrapage .rating1 .staractive {
+  color: gold;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  fill: gold;
+}
+.extrapage .rating1 .star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.extrapage .extrapageform button {
+  background: var(--green);
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.extrapage .extrapageform button:hover {
+  background: #000;
+  color: var(--green);
+}
