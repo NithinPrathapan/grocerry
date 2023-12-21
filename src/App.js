@@ -7,6 +7,9 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import ProductPage from "./Pages/ProductPage/ProductPage";
 import About from "./Pages/Extra/About";
 import Contact from "./Pages/Extra/Contact";
+import Login from "./Pages/Auth/Login";
+import Signup from "./Pages/Auth/Signup";
+import ForgotPassword from "./Pages/Auth/ForgotPassword";
 
 const App = () => {
   return (
@@ -18,6 +21,9 @@ const App = () => {
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
       </Routes>
     </BrowserRouter>
   );

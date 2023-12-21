@@ -6,7 +6,7 @@ import ProductSidebar from "../COMPONENTS/Products/ProductSidebar";
 import Footer1 from "../COMPONENTS/Footer/Footer1";
 import Footer2 from "../COMPONENTS/Footer/Footer2";
 import ProductSlider from "../COMPONENTS/Product-slider/ProductSlider";
-import clip1 from "../Assets/images/clip1.png";
+import clip1 from '../Assets/images/clip1.png'
 
 const Home = () => {
   const products = [
