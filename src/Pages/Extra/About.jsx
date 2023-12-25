@@ -10,7 +10,7 @@ const About = () => {
     "https://images.unsplash.com/photo-1490818387583-1baba5e638af?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
   return (
     <div className="extrapage">
-      <Navbar />
+      <Navbar reloadNavbar={false} />
       <SingleBanner heading="About Us" image={aboutImg} />
       <div className="pgleft pgcommon">
         <img src={aboutImg} alt="noimg" />

@@ -9,8 +9,11 @@ import Footer1 from "../../COMPONENTS/Footer/Footer1";
 import Footer2 from "../../COMPONENTS/Footer/Footer2";
 import clip1 from "../../Assets/images/clip1.png";
 import ProductSlider from "../../COMPONENTS/Product-slider/ProductSlider";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductPage = () => {
+  const [reloadNavbar, setReloadNavbar] = useState(true);
   const [imageset, setimageset] = React.useState([]);
   const [productdata, setproductdata] = React.useState([]);
   const [activeimg, setactiveimg] = React.useState({});
@@ -18,6 +21,7 @@ const ProductPage = () => {
   const [showreview, setshowreview] = React.useState(true);
   const [Rating, setRating] = useState(0);
 
+  //dummy products
   const products = [
     {
       id: 1,
@@ -106,6 +110,53 @@ const ProductPage = () => {
     // Add more grocery items as needed
   ];
 
+  //add to cart function on click add to cart button
+  // ! *************************************************
+  const addToCart = async () => {
+    let cart = await JSON.parse(localStorage.getItem("cart"));
+    if (cart) {
+      let itemincart = cart.find(
+        (item) => item.productdata.ProductId === productdata.ProductId
+      );
+      if (itemincart) {
+        cart = cart.map((item) => {
+          if (item.productdata.ProductId === productdata.ProductId) {
+            return {
+              ...item,
+              quantity: item.quantity + count,
+            };
+          } else {
+            return item;
+          }
+        });
+        // ! if current item not in the cart
+      } else {
+        cart = [
+          ...cart,
+          {
+            productdata,
+            quantity: count,
+          },
+        ];
+      }
+    } else {
+      // ! sending product data if no cart present
+      cart = [
+        {
+          productdata,
+          quantity: count,
+        },
+      ];
+      console.log(cart);
+    }
+    setReloadNavbar(!reloadNavbar);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    toast.success("Added to cart", {
+      position: toast.POSITION.TOP_RIGHT,
+      autoClose: 3000, // Set the duration for the notification to be displayed
+    });
+  };
+  // ! *************************************************
   const getProductDataById = async () => {
     window.scroll(0, 0);
     const temp = {
@@ -201,8 +252,19 @@ const ProductPage = () => {
 
   return (
     <div className="productpage">
-      <Navbar />
-
+      <Navbar reloadNavbar={reloadNavbar} />
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        theme="dark"
+      />
       <div className="pc1">
         <Link to="/">
           <button className="goback">
@@ -266,7 +328,7 @@ const ProductPage = () => {
             </div>
           </div>
           <div className="cartsection">
-            <button>Add to Cart</button>
+            <button onClick={addToCart}>Add to Cart</button>
             <button>Buy Now</button>
           </div>
         </div>

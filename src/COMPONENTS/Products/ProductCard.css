@@ -167,7 +167,8 @@
 }
 .product-card .cart_btn {
   position: absolute;
-  top: 78%;
+  top: 76%;
+  transition: all 0.5s ease;
   right: 5px;
   display: flex;
   height: 25px;
@@ -186,10 +187,16 @@
 }
 .product-card .cart_btn .add_cart {
   width: 100%;
+  display: flex;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   border: none;
-  background: white;
+  font-size: 12px;
 }
-.product-card .add_cart .cart_btn svg:hover {
+.product-card .add_cart:hover {
   background: var(--green);
   color: white;
 }
