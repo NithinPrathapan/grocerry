@@ -35,7 +35,13 @@ const ProductSlider = ({ products, categoryname }) => {
         infinite
       >
         {products.map((item, i) => {
-          return <ProductCard data={item} key={i} />;
+          return (
+            <ProductCard
+              data={item}
+              key={i}
+              
+            />
+          );
         })}
       </Carousel>
     </div>

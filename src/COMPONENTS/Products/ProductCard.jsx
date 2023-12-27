@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 const ProductCard = ({ data }) => {
   const [show, setShow] = useState(false);
   const [count, setCount] = useState(1);
-  const [reloadNavbar, setReloadNavbar] = useState(true);
 
   const addToCart = async () => {
     let productdata = data;
@@ -53,20 +52,24 @@ const ProductCard = ({ data }) => {
       position: toast.POSITION.TOP_RIGHT,
       autoClose: 3000, // Set the duration for the notification to be displayed
     });
-    window.location.reload();
   };
 
   return (
     <div className="product-card">
       <div className="s1">
-        <img src={data.productImage} alt="noimage" />
+        <Link to={`product/${data.ProductId}`} className="stylenone">
+          <img src={data.ProductImage[0].image} alt="noimage" />
+        </Link>
       </div>
       <div className="s2">
         <h3>
-          ${Math.floor(data.price - (data.price * data.discount) / 100)}
-          <span>{data.price}</span>
+          $
+          {Math.floor(
+            data.ProductPrice - (data.ProductPrice * data.ProductDiscount) / 100
+          )}
+          <span>{data.ProductPrice}</span>
         </h3>
-        <p>{data.name}</p>
+        <p>{data.ProductName}</p>
       </div>
       <div className="s3">
         <p>{data.countType}</p>
@@ -104,12 +107,11 @@ const ProductCard = ({ data }) => {
             >
               Add to cart
             </button>
-            <ToastContainer />
           </div>
         </div>
       ) : (
         <div className="addbtn">
-          <Link to={`product/${data.id}`}>
+          <Link to={`product/${data.ProductId}`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

@@ -11,6 +11,7 @@ import clip1 from "../../Assets/images/clip1.png";
 import ProductSlider from "../../COMPONENTS/Product-slider/ProductSlider";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { data } from "../../data/data";
 
 const ProductPage = () => {
   const [reloadNavbar, setReloadNavbar] = useState(true);
@@ -22,94 +23,7 @@ const ProductPage = () => {
   const [Rating, setRating] = useState(0);
 
   //dummy products
-  const products = [
-    {
-      id: 1,
-      name: "Apples",
-      productImage: clip1,
-      countType: "count 1",
-      price: 22.99,
-      discount: 13,
-    },
-    {
-      id: 2,
-      name: "Milk",
-      productImage:
-        "https://images.unsplash.com/photo-1600788907416-456578634209?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      countType: "count 1",
-      price: 21.49,
-      discount: 13,
-    },
-    {
-      id: 2,
-      name: "Milk",
-      productImage:
-        "https://images.unsplash.com/photo-1600788907416-456578634209?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      countType: "count 1",
-      price: 21.49,
-      discount: 13,
-    },
-    {
-      id: 3,
-      name: "Bread",
-      productImage:
-        "https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?q=80&w=1896&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      countType: "count 1",
-      price: 42.29,
-      discount: 13,
-    },
-    {
-      id: 4,
-      name: "Eggs",
-      productImage:
-        "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      countType: "count 1",
-      price: 6.99,
-      discount: 13,
-    },
-    {
-      id: 5,
-      name: "Bananas",
-      productImage: clip1,
-      countType: "count 1",
-      price: 16.79,
-      discount: 13,
-    },
-    {
-      id: 6,
-      name: "Tomatoes",
-      productImage: clip1,
-      countType: "count 1",
-      price: 28.49,
-      discount: 15,
-    },
-    {
-      id: 7,
-      name: "Chicken Breast",
-      productImage: clip1,
-      countType: "count 1",
-      price: 55.99,
-      discount: 15,
-    },
-    {
-      id: 8,
-      name: "Pasta",
-      productImage: clip1,
-      countType: "count 1",
-      price: 40.79,
-      discount: 15,
-    },
-    {
-      id: 9,
-      name: "Orange Juice",
-      productImage: clip1,
-      countType: "count 1",
-      price: 30.49,
-      discount: 5,
-    },
-    // Add more grocery items as needed
-  ];
-
+ 
   //add to cart function on click add to cart button
   // ! *************************************************
   const addToCart = async () => {
@@ -761,10 +675,10 @@ const ProductPage = () => {
         )}
       </div>
       <div className="slidercont">
-        <ProductSlider products={products} categoryname="Related products" />
+        <ProductSlider products={data} categoryname="Related products" />
       </div>
       <div className="slidercont">
-        <ProductSlider products={products} categoryname="Explore More" />
+        <ProductSlider products={data} categoryname="Explore More" />
       </div>
       <Footer1 />
       <Footer2 />
