@@ -1,0 +1,95 @@
+.cartcont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  max-width: 1200px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.38);
+  margin: 20px;
+}
+
+.cartcont table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cartcont table thead th {
+  padding: 10px 0;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray);
+}
+.cartcont table tr img {
+  height: 50px;
+  object-fit: cover;
+  width: 50px;
+  margin-right: 10px;
+}
+.cartcont table .cartitemrow td {
+  padding: 10px 0;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+}
+.cartcont .cartProduct {
+  width: 300px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+.cartcont .cartProduct p {
+  margin: 0;
+  padding: 0;
+}
+.cartcont .quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
+.cartcont .quantity button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--green);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cartcont .quantity span {
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--gray);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+.cartcont .delbtn {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--green);
+  margin-left: 10px;
+}
+.cartcont .totaltableright {
+  font-weight: 600;
+  font-size: 16px;
+  color: #171212;
+}
+.cartcont .totaltableleft {
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--green);
+}
+.cartcont table .cartitemrow {
+  border-bottom: 1px solid #d4c7c7;
+}
