@@ -7,6 +7,7 @@ import SingleBanner from "../../COMPONENTS/Banners/SingleBanner";
 import "./Cart.css";
 import "./Progress.css";
 import "./CartContainer.css";
+import "./ShippingContainer.css";
 
 const Cart = () => {
   const [cartData, setCartData] = useState([]);
@@ -15,7 +16,15 @@ const Cart = () => {
   const [shipping, setShipping] = useState(0);
   const [active, setActive] = useState(1);
   const [tax, setTax] = useState(18);
-
+  const [selectedAddress, setSelectedAddress] = useState(null);
+  const [deliveryDate, setDeliveryDate] = useState(
+    new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000)
+      .toISOString()
+      .split("T")[0]
+  );
+  const handleRadioChange = (index) => {
+    setSelectedAddress(index);
+  };
   const checkLogin = () => {
     return true;
   };
@@ -48,6 +57,21 @@ const Cart = () => {
     localStorage.setItem("cart", JSON.stringify(temp));
     getCartData();
   };
+  const savedAddress = [
+    {
+      Addressline1: "Address Line 1",
+      Addressline2: "Address Line 2",
+      Addressline3: "Address Line 3",
+      postalCode: "767668",
+    },
+    {
+      Addressline1: "Address Line 1",
+      Addressline2: "Address Line 2",
+      Addressline3: "Address Line 3",
+      postalCode: "337887",
+    },
+  ];
+
   return (
     <div>
       <Navbar reloadNavbar={reloadNavbar} />
@@ -58,7 +82,10 @@ const Cart = () => {
             <div
               className="c11"
               onClick={() => {
-                cartData.length > 0 && cartData.length > 0 && checkLogin() && setActive(1);
+                cartData.length > 0 &&
+                  cartData.length > 0 &&
+                  checkLogin() &&
+                  setActive(1);
               }}
             >
               <svg
@@ -432,7 +459,60 @@ const Cart = () => {
         )}
         {active === 2 && (
           <div className="shippingcont">
-            <p>Shipping container</p>
+            <div className="selectdate">
+              <h2 className="mainhead1">Select Delivery Date</h2>
+              <input
+                type="date"
+                min={
+                  new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000)
+                    .toISOString()
+                    .split("T")[0]
+                }
+                value={deliveryDate}
+                onChange={(e) => {
+                  setDeliveryDate(e.target.value);
+                }}
+              />
+            </div>
+            <div className="previous">
+              <h2 className="mainhead1">Previous Saved Address</h2>
+              {savedAddress.length > 0 ? (
+                savedAddress.map((item, index) => {
+                  return (
+                    <div key={index} className="radio">
+                      <input
+                        checked={selectedAddress === index}
+                        type="radio"
+                        onChange={() => {
+                          handleRadioChange(index);
+                        }}
+                      />
+                      <span>
+                        {item.Addressline1 +
+                          "," +
+                          item.Addressline2 +
+                          "," +
+                          item.Addressline3 +
+                          "," +
+                          item.postalCode}
+                      </span>
+                    </div>
+                  );
+                })
+              ) : (
+                <div className="emptyaddress">
+                  <p>No address found</p>
+                </div>
+              )}
+            </div>
+            <h3>OR</h3>
+            <div className="shippingadd">
+              <input type="text" placeholder="Address Line 1" />
+              <input type="text" placeholder="Address Line 2" />
+              <input type="text" placeholder="Address Line 3" />
+              <input type="text" placeholder="Postal Code" />
+              <button className="savebtn">Save</button>
+            </div>
           </div>
         )}
         {active === 3 && (
