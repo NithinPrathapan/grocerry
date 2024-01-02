@@ -8,6 +8,8 @@ import "./Cart.css";
 import "./Progress.css";
 import "./CartContainer.css";
 import "./ShippingContainer.css";
+import "./OrderSuccess.css";
+import "./PaymentContainer.css";
 
 const Cart = () => {
   const [cartData, setCartData] = useState([]);
@@ -517,12 +519,60 @@ const Cart = () => {
         )}
         {active === 3 && (
           <div className="paymentcont">
-            <p>Payment container</p>
+            <h2 className="mainhead1">Select Payment Method</h2>
+            <div className="paymenttypes">
+              <div className="c1">
+                <input type="radio" name="payment" id="payment" />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png"
+                  alt="paypal"
+                />
+              </div>
+              <div className="c1">
+                <input type="radio" name="payment" id="payment" />
+                <img
+                  src="https://www.investopedia.com/thmb/F8CKM3YkF1fmnRCU2g4knuK0eDY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/MClogo-c823e495c5cf455c89ddfb0e17fc7978.jpg"
+                  alt="paypal"
+                />
+              </div>
+              <div className="c1">
+                <input type="radio" name="payment" id="payment" />
+                <img
+                  src="https://d6xcmfyh68wv8.cloudfront.net/newsroom-content/uploads/2022/07/Razorpay_payments.png"
+                  alt="paypal"
+                />
+              </div>
+            </div>
+            <div className="paymentagreement">
+              <input type="checkbox" name="agreement" id="agreement" />
+              <label htmlFor="agreement">
+                I agree to the terms and conditions
+              </label>
+            </div>
+            <div className="c2">
+              <span>Net Total</span>
+              &nbsp;&nbsp;
+              <span>${(subtotal + tax + shipping).toFixed(2)}</span>
+            </div>
           </div>
         )}
         {active === 4 && (
           <div className="ordersuccessfull">
-            <p>Sucess container</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+            <h2 className="mainhead1">Order Placed Successfully</h2>
           </div>
         )}
         {active === 1 && cartData.length > 0 && (
