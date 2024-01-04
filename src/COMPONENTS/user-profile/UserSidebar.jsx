@@ -23,7 +23,7 @@ const UserSidebar = ({ activepage }) => {
           <span>Account Settings</span>
         </div>
       ) : (
-        <Link className="stylenone " to="user/accountsettings">
+        <Link className="stylenone " to="/user/accountsettings">
           <div className="s1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ const UserSidebar = ({ activepage }) => {
           </div>
         </Link>
       )}
-      {/* {activepage === "yourorders" ? (
+      {activepage === "yourorders" ? (
         <div className="s2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const UserSidebar = ({ activepage }) => {
             <span>Your Orders</span>
           </div>
         </Link>
-      )} */}
+      )}
       {activepage === "changepassword" ? (
         <div className="s2">
           <svg

@@ -6,8 +6,9 @@ import Footer2 from "../../COMPONENTS/Footer/Footer2";
 import SingleBanner from "../../COMPONENTS/Banners/SingleBanner";
 import UserSidebar from "../../COMPONENTS/user-profile/UserSidebar";
 import AccountSettings from "../../COMPONENTS/user-profile/AccountSettings";
-import './UserProfile.css'
+import "./UserProfile.css";
 import ChangePassword from "../../COMPONENTS/user-profile/ChangePassword";
+import YourOrders from "../../COMPONENTS/user-profile/YourOrders";
 
 const UserProfile = () => {
   const { activepage } = useParams();
@@ -26,6 +27,7 @@ const UserProfile = () => {
         <div className="right">
           {activepage === "accountsettings" && <AccountSettings />}
           {activepage === "changepassword" && <ChangePassword />}
+          {activepage === "yourorders" && <YourOrders />}
         </div>
       </div>
       <Footer1 />
