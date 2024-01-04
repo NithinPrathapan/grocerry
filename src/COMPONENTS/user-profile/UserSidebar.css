@@ -10,6 +10,7 @@
   align-items: center;
   gap: 10px;
   padding: 20px 20px;
+  transition: all 0.6s ease-in-out;
 }
 .usersidebar svg {
   width: 30px !important;
@@ -22,4 +23,11 @@
   background: #000000;
   cursor: pointer;
   color: white;
+}
+.usersidebar .s2 {
+  background: var(--light);
+  color: black;
+}
+.usersidebar .s2 svg {
+  color: black;
 }

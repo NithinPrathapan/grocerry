@@ -9,13 +9,6 @@
   margin: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
 }
-.mainhead1 {
-  font-size: 35px;
-  color: var(--green);
-  font-weight: 300;
-  padding: 5px 10px;
-  margin: 10px;
-}
 
 .shippingcont .previous {
   display: flex;

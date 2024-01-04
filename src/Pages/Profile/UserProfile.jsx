@@ -9,6 +9,8 @@ import AccountSettings from "../../COMPONENTS/user-profile/AccountSettings";
 import "./UserProfile.css";
 import ChangePassword from "../../COMPONENTS/user-profile/ChangePassword";
 import YourOrders from "../../COMPONENTS/user-profile/YourOrders";
+import UserAddress from "../../COMPONENTS/user-profile/UserAddress";
+import LegalNotice from "../../COMPONENTS/user-profile/LegalNotice";
 
 const UserProfile = () => {
   const { activepage } = useParams();
@@ -28,6 +30,8 @@ const UserProfile = () => {
           {activepage === "accountsettings" && <AccountSettings />}
           {activepage === "changepassword" && <ChangePassword />}
           {activepage === "yourorders" && <YourOrders />}
+          {activepage === "address" && <UserAddress />}
+          {activepage === "legalnotice" && <LegalNotice />}
         </div>
       </div>
       <Footer1 />

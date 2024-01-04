@@ -40,3 +40,11 @@
 .mainbtn:hover {
   background: #000;
 }
+
+.mainhead1 {
+  font-size: 35px;
+  color: var(--green);
+  font-weight: 600;
+  padding: 5px 10px;
+  margin: 10px;
+}
