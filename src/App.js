@@ -11,6 +11,7 @@ import Login from "./Pages/Auth/Login";
 import Signup from "./Pages/Auth/Signup";
 import ForgotPassword from "./Pages/Auth/ForgotPassword";
 import Cart from "./Pages/Cart/Cart";
+import UserProfile from "./Pages/Profile/UserProfile";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/user/:activepage" element={<UserProfile />} />
       </Routes>
     </BrowserRouter>
   );
