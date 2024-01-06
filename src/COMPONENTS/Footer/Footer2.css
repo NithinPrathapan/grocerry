@@ -39,6 +39,8 @@
 }
 .footerin1 .f2 {
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footerin1 .f2 h3 {

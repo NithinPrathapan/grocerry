@@ -12,6 +12,9 @@ import Signup from "./Pages/Auth/Signup";
 import ForgotPassword from "./Pages/Auth/ForgotPassword";
 import Cart from "./Pages/Cart/Cart";
 import UserProfile from "./Pages/Profile/UserProfile";
+import FAQ from "./Pages/Extra/FAQ";
+import PrivacyPolicy from "./Pages/Extra/PrivacyPolicy";
+import TermsAndConditions from "./Pages/Extra/TermsAndConditions";
 
 const App = () => {
   return (
@@ -28,6 +31,9 @@ const App = () => {
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/user/:activepage" element={<UserProfile />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/termsandconditions" element={<TermsAndConditions />} />
       </Routes>
     </BrowserRouter>
   );

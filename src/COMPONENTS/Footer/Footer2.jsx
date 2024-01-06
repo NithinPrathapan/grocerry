@@ -3,6 +3,7 @@ import logo from "../../Assets/logo.png";
 import "./Footer2.css";
 import pay from "../../Assets/images/pay.png";
 import social from "../../Assets/images/social.png";
+import { Link } from "react-router-dom";
 const Footer2 = () => {
   return (
     <div className="footer2">
@@ -19,15 +20,23 @@ const Footer2 = () => {
         </div>
         <div className="f2">
           <h3>About Us</h3>
-          <p>About us</p>
-          <p>Contact us</p>
+          <Link to="/about" className="stylenone">
+            <p>About Us</p>
+          </Link>
+          <Link to="/contact" className="stylenone">
+            <p> Contact Us</p>
+          </Link>
           <p>About team</p>
           <p>Customer support</p>
         </div>
         <div className="f2">
           <h3>Our information</h3>
-          <p>Privacy policy update</p>
-          <p>Terms and conditions</p>
+          <Link className="stylenone" to="/privacypolicy">
+            <p>Privacy Policy</p>
+          </Link>{" "}
+          <Link className="stylenone" to="/termsandconditions">
+            <p>Terms and conditions</p>
+          </Link>
           <p>Return Policy</p>
           <p>Site map</p>
         </div>

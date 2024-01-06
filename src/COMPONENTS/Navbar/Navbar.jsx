@@ -52,7 +52,7 @@ const Navbar = ({ reloadNavbar }) => {
         <div className="right">
           <div className="cart">
             <span className="qty">{cartQuantity}</span>
-            <Link to='/cart' className="stylenone">
+            <Link to="/cart" className="stylenone">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -98,31 +98,13 @@ const Navbar = ({ reloadNavbar }) => {
         </div>
       </div>
       <div className="s2">
-        <Link to="/">
+        <Link className="stylenone" to="/">
           <a>Home</a>
         </Link>
-        <Dropdown>
-          <Dropdown.Toggle variant="" id="dropdown-basic">
-            Categories
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-        <Dropdown>
-          <Dropdown.Toggle variant="" id="dropdown-basic">
-            Categories
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-        <Link to="/about">
+        <Link className="stylenone" to="/about">
           <a>About</a>
         </Link>
-        <Link to="/contact">
+        <Link className="stylenone" to="/contact">
           <a>Contact</a>
         </Link>
         <Dropdown>
@@ -132,6 +114,28 @@ const Navbar = ({ reloadNavbar }) => {
           <Dropdown.Menu>
             <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
             <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        <Dropdown>
+          <Dropdown.Toggle variant="" id="dropdown-basic">
+            Categories
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+
+        <Dropdown>
+          <Dropdown.Toggle variant="" id="dropdown-basic">
+            More
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item href="/faq">FAQ</Dropdown.Item>
+            <Dropdown.Item href="/privacypolicy">Privacy Policy</Dropdown.Item>
+            <Dropdown.Item href="/termsandconditions">
+              Terms and Conditions
+            </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </div>

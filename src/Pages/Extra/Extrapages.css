@@ -74,7 +74,7 @@
   font-weight: 600;
   margin-top: 5px;
 }
-.extrapage textarea {
+.extrapage .extrapageform textarea {
   height: 100px;
   width: 100%;
   border: 1px solid var(--green);
@@ -150,4 +150,83 @@
 .extrapage .extrapageform button:hover {
   background: #000;
   color: var(--green);
+}
+
+/*  */
+
+.pgcont1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  align-self: center;
+  padding: 40px;
+}
+
+.pgcont1 h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--gray);
+  margin-bottom: 10px;
+  padding: 0;
+  letter-spacing: 1px;
+}
+.pgcont1 p {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(56, 56, 56);
+  margin: 0px 0px 10px 0px;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+/* faq */
+
+.extrapage .faqcontainer {
+  width: 60%;
+  align-self: center;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+}
+.faqcontainer svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.extrapage .faq {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.178);
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+.extrapage .faq .faqhead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0px;
+}
+
+.extrapage .faqcontainer .faqhead h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(56, 56, 56);
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+.extrapage .faqcontainer .faq p {
+  font-size: 15px;
+  font-weight: 400;
+  color: gray;
+  padding: 0;
+  letter-spacing: 1px;
+  margin: 0;
 }
