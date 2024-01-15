@@ -128,3 +128,33 @@
   align-items: center;
   height: 40px;
 }
+
+@media (max-width:650px){
+  .footer2 .f1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  .footer2 .f2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .footerin2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+}

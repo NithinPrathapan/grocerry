@@ -32,3 +32,9 @@
   font-weight: 300;
   margin-bottom: 10px;
 }
+
+@media (max-width:650px){
+  .footer1{
+    display: none;
+  }
+}

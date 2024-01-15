@@ -4,13 +4,16 @@
   background-color: white;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  justify-content: center;
 }
 
 .authcont {
   display: flex;
   align-items: center;
-  width: 80%;
-  height: 80vh;
+  justify-content: center;
+  width: 90%;
+  height: 100vh;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
@@ -18,6 +21,7 @@
   margin-top: 5%;
   margin-bottom: 5%;
   background-color: rgba(0, 0, 0, 0.798);
+  border-radius: 10px;
 }
 
 .authcont img {
@@ -28,6 +32,7 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   object-fit: contain;
+  border-radius: 10px;
 }
 
 .authform {
@@ -43,6 +48,7 @@
   flex-direction: column;
   gap: 5px;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .authform h1 {
@@ -61,7 +67,8 @@
   border: 1px solid white;
   border-radius: 5px;
   outline: none;
-  font-size: 20px;
+  font-size: 14px;
+  width: 100%;
   font-weight: 500;
   color: white;
   background-color: rgba(255, 255, 255, 0.042);
@@ -94,6 +101,8 @@
   color: rgb(255, 255, 255);
   text-decoration: none;
   margin: 0px;
+  margin: 10px 0;
+  font-size: 14px;
   padding: 0px;
   text-align: right;
 }
@@ -107,10 +116,78 @@
   text-align: center;
   margin: 10px 0px;
   padding: 0px;
-  font-size: 20px;
+  font-size: 17px;
   color: white;
 }
 .form_group_row {
   display: flex;
   gap: 10px;
+}
+
+@media (max-width: 1000px) {
+  .authcont {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    align-self: center;
+    overflow-y: scroll;
+  }
+  .authcont img {
+    width: 70%;
+    height: 5%;
+  }
+  .authform {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 10px 20px;
+    margin: 0 0;
+    gap: 0px;
+  }
+  .authform input {
+    font-size: 15px;
+    margin: 0px;
+  }
+  .authform label {
+    font-size: 15px;
+  }
+  .authform h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .authform button {
+    font-size: 15px;
+    padding: 5px;
+    width: 100%;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .authform p {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+  .authform .or {
+    font-size: 14px;
+  }
+  .authform .form_group_row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .authcont {
+    flex-direction: column;
+    height: 100%;
+    width: 97%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    align-self: center;
+  }
+  .authcont img {
+    width: 100%;
+  }
 }

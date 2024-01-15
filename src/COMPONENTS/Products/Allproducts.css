@@ -12,3 +12,15 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+@media (max-width: 950px) {
+  .allproducts {
+    width: 60%;
+  }
+
+}
+@media(max-width:650px){
+  .allproducts{
+    width: 100%;
+  }
+}

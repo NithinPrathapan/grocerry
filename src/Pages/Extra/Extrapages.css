@@ -54,6 +54,7 @@
   width: 50%;
   display: flex;
   flex-direction: column;
+
   justify-content: center;
 }
 .extrapage .extrapageform .formgroup {
@@ -61,6 +62,9 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
+}
+.extrapage .extrapageform .formheading {
+  color: var(--green);
 }
 .extrapage .extrapageform .formgroup input {
   width: 100%;
@@ -229,4 +233,142 @@
   padding: 0;
   letter-spacing: 1px;
   margin: 0;
+}
+@media (max-width: 1500px) {
+  .pgcommon {
+    width: 100%;
+    margin: 0px;
+    padding: 30px;
+  }
+  .pgcommon img {
+    width: 40%;
+  }
+  .pgcommon div {
+    width: 60%;
+  }
+  .pgcommon div h1 {
+    font-size: 40px;
+  }
+  .pgcommon div p {
+    font-size: 20px;
+  }
+  .extrapage .faqcontainer{
+    width: 90%;
+  }
+}
+@media (max-width: 1000px) {
+  .pgcommon {
+    width: 100%;
+    margin: 0px;
+    padding: 30px;
+  }
+  .pgcommon img {
+    width: 50%;
+  }
+  .pgcommon div {
+    width: 50%;
+  }
+  .pgcommon div h1 {
+    font-size: 40px;
+  }
+  .pgcommon div p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1000px) {
+  .extrapageform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    align-self: center;
+  }
+  .extrapage .extrapageform .formgroup {
+    width: 100%;
+    align-items: flex-start;
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+  }
+  .extrapage .extrapageform div textarea {
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 800px) {
+  .pgcommon {
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    flex-direction: column;
+  }
+  .pgcommon img {
+    width: 97%;
+    object-fit: contain;
+    justify-content: center;
+  }
+  .pgcommon div {
+    width: 80%;
+    text-align: center;
+  }
+  .pgcommon div h1 {
+    font-size: 40px;
+  }
+  .pgcommon div p {
+    font-size: 14px;
+  }
+  .extrapage .extrapageform {
+    width: 90%;
+  }
+  .extrapage .extrapageform .rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin: 10px 0px;
+  }
+  .extrapage .extrapageform .rating .starinactive {
+    color: lightgray;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .extrapage .extrapageform .rating .staractive {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .pgcont1 {
+    min-width: 99%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 30px 0px;
+  }
+  .pgcont1 h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--green);
+    margin-bottom: 15px;
+    padding: 0;
+    letter-spacing: 1px;
+  }
+  .pgcont1 p{
+    font-size: 15px;
+  }
+  .extrapage .faqcontainer{
+    width: 97%;
+    margin: 0;
+    padding: 0;
+  }
+  .extrapage .faqcontainer .faq{
+    padding: 20px;
+  }
 }

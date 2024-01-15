@@ -59,7 +59,7 @@ const CateorySidebar = () => {
         return (
           <div key={item.id} className="category">
             <img src={item.categoryImage} alt="noimage" />
-            <h3>{item.categoryName}</h3>
+            <h6>{item.categoryName}</h6>
           </div>
         );
       })}

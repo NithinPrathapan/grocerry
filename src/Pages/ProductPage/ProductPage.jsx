@@ -205,7 +205,7 @@ const ProductPage = () => {
               <div
                 onClick={() => {
                   setactiveimg(item);
-                }}
+                }} 
                 className="imgsmall"
               >
                 <img
