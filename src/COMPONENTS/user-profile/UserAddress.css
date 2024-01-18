@@ -48,7 +48,9 @@
   color: white;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.172);
-  padding: 10px;
+  margin: 10px;
+  padding: 2px;
+
 }
 
 .useraddress .addnew {
@@ -72,26 +74,29 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 20px;
+  gap: 4px;
 }
 .useraddress .form .form-group {
   display: flex;
   flex-direction: column;
-  width: 45%;
-  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .useraddress .form .form-group label {
   font-size: 1.2rem;
   font-weight: 300;
   margin-bottom: 5px;
+  width: 100%;
 }
 
 .useraddress .form .form-group input {
-  padding: 10px 20px;
+  padding: 5px 10px;
   border: 1px solid rgb(207, 207, 207);
   border-radius: 5px;
   outline: none;
+  width: 100%;
 }
 .useraddress .form .form-group input:focus {
   border: 1px solid var(--green);
@@ -110,6 +115,48 @@
   min-width: 100%;
   font-size: 1.2rem;
 }
-.getpostalcode:hover{
+.getpostalcode:hover {
   color: var(--green);
+}
+@media (max-width: 1000px) {
+  .useraddress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .useraddress .addressin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .useraddress .addressin .address {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: left;
+  }
+  .useraddress .addnew {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .useraddress .addnew .form {
+    width: 100%;
+  }
+  .useraddress .addnewbtn {
+    width:40px;
+    height: 40px;
+    background-color: var(--green);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.172);
+    margin: 10px;
+    padding: 2px;
+  }
+  
 }

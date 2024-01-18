@@ -12,7 +12,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  width: 99%;
   padding: 10px 20px;
 }
 .accountsettings .form .form-group {
@@ -20,6 +20,7 @@
   flex-direction: column;
   width: 45%;
   margin: 10px;
+  width: 97%;
 }
 .accountsettings .form .form-group label {
   font-size: 1.2rem;
@@ -31,7 +32,42 @@
   border: 1px solid rgb(207, 207, 207);
   border-radius: 5px;
   outline: none;
+  min-width: 99%;
 }
 .accountsettings .form .form-group input:focus {
   border: 1px solid var(--green);
+}
+
+@media (max-width: 800px) {
+  .accountsettings .form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 20px;
+    align-items: center;
+  }
+  .accountsettings .form .form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 97%;
+    margin: 10px;
+  }
+
+  .accountsettings h1 {
+    font-size: 20px;
+  }
+  .accountsettings .form .form-group label {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 3px;
+  }
+  .accountsettings .form .form-group input {
+    width: 99%;
+    padding: 5px 10px;
+  }
+  .accountsettings .form {
+    padding: 5px;
+  }
 }

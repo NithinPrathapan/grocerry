@@ -7,7 +7,7 @@ const UserAddress = () => {
     {
       AddressLine1: "Nithin",
       AddressLine2: "Pulikkarayil",
-      AddressLine3: "Kottayam",
+      AddressLine3: "Kottayam ",
     },
     {
       AddressLine1: "Prathapan",
