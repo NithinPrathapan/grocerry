@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./YourOrders.css";
+import { useSelector, useDispatch } from "react-redux";
+import OrderSuccessful from "../order-success/OrderSuccessful";
+import { showInvoice } from "../../redux/OrderSuccessfullSlice";
 
 const YourOrders = () => {
   const data = [
@@ -52,8 +55,23 @@ const YourOrders = () => {
       total: 100,
     },
   ];
+  const dispatch = useDispatch();
+  const orderSuccess = useSelector(
+    (state) => state.orderSuccessReducer.orderSuccess
+  );
+  console.log(orderSuccess);
+  const handleShowInvoice = () => {
+    dispatch(showInvoice());
+  };
+  const [selectedOrderId, setSelectedOrderId] = useState(0);
   return (
     <div className="yourorders">
+      {orderSuccess && (
+        <OrderSuccessful
+          orderId={selectedOrderId}
+          message={`Order ID : ${selectedOrderId}`}
+        />
+      )}
       <h1 className="mainhead1">Your Orders</h1>
       <table>
         <thead>
@@ -68,9 +86,9 @@ const YourOrders = () => {
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
-              <td data-label='OrderID' >{item.id}</td>
-              <td data-label='OrderDate' >{item.date}</td>
-              <td data-label='Delivery Status' >
+              <td data-label="OrderID">{item.id}</td>
+              <td data-label="OrderDate">{item.date}</td>
+              <td data-label="Delivery Status">
                 <p>
                   {item.status === "Delivered" && (
                     <span className="greendot"></span>
@@ -84,12 +102,20 @@ const YourOrders = () => {
                   {item.status}
                 </p>
               </td>
-              <td data-label='Total' >
+              <td data-label="Total">
                 ${""}
                 {item.total}
               </td>
-              <td data-label='invoice' >
-                <button className="mainbtn">Invoice</button>
+              <td data-label="invoice">
+                <button
+                  className="mainbtn"
+                  onClick={() => {
+                    setSelectedOrderId(item.id);
+                    handleShowInvoice();
+                  }}
+                >
+                  View
+                </button>
               </td>
             </tr>
           ))}
