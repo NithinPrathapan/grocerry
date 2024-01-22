@@ -8,7 +8,7 @@
   padding: 10px;
   position: relative;
 }
-.yourorders table {
+.yourorderstable {
   width: 100%;
   overflow: hidden;
   border-collapse: collapse;
@@ -17,18 +17,18 @@
   table-layout: fixed;
 }
 
-.yourorders table tr {
+.yourorderstable tr {
   border: 1px solid var(--light);
   border-radius: 5px;
+  text-align: center;
 }
-.yourorders table tr th {
+.yourorderstable tr th {
   padding: 10px 20px;
-  border: 1px solid var(--light);
-  border-radius: 5px;
-  background-color: #f1f1f1;
-  color: gray;
+  background-color: var(--green);
+  color: white;
+  text-align: center;
 }
-.yourorders table tr td {
+.yourorderstable tr td {
   padding: 10px 20px;
   border: 1px solid var(--light);
   border-radius: 5px;
@@ -36,19 +36,20 @@
   color: gray;
 }
 
-.yourorders table tr td button {
+.yourorderstable tr td button {
   padding: 5px 20px;
   margin: 0px;
   font-size: 16px;
 }
-.yourorders table tr td button:hover {
+.yourorderstable tr td button:hover {
   background: var(--green);
   color: white;
 }
 
-.yourorders table tr td p {
+.yourorderstable tr td p {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   font-size: 14px;
   margin: 0;
@@ -72,34 +73,33 @@
   background: red;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .yourorders table {
     border: 0;
   }
-  .yourorders table thead {
+  .yourorderstable thead {
     border: none;
-     height: 1px;
+    height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
     position: absolute;
     width: 1px;
   }
-  .yourorders table tr {
-    border-bottom: 3px solid #ddd;
+  .yourorderstable tr {
     display: block;
     margin-bottom: 20px;
     padding: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.134);
   }
-  .yourorders table td {
+  .yourorderstable tr td {
     border: none;
-    border-bottom: 3px solid #ddd;
-    display: block;
+    border-radius: 0px;
+    display: flex;
     font-size: 0.8rem;
-    text-align: right;
+    justify-content: space-between;
   }
-  .yourorders table caption {
-    font-size: 16px;
+  .yourorderstable td::before {
+    content: attr(data-label);
   }
 }

@@ -75,19 +75,20 @@ nav .cart {
   margin: 0px 20px;
 }
 nav .cart .qty {
-  background: var(--green);
   color: white;
-  width: 25px;
-  height: 25px;
+  background:var(--green);
+  width: 20px;
+  height: 20px;
   position: absolute;
   top: -15px;
-  right: -15px;
+  right: -13px;
   border-radius: 50%;
   justify-content: center;
   display: flex;
   align-items: center;
   text-align: center;
   font-size: 12px;
+  font-weight: bold;
 }
 
 nav .s2 {
@@ -127,12 +128,16 @@ nav .s3 {
     padding: 0px;
     width: 100%;
   }
-  nav .s3 .s31{
+  nav .s3 .s31 {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  nav .cart .qty{
+    color: black;
+    background: var(--green);
+  }
   nav .searchbar {
     width: 100%;
     margin: 10px 0px;
@@ -141,32 +146,44 @@ nav .s3 {
   nav .s3 ul {
     display: flex;
     flex-direction: row;
-    gap: 10px;
     padding: 0px;
     margin: 0px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 5px;
     width: 100%;
   }
   nav .s3 ul li {
     list-style: none;
     font-size: 14px;
+    width: 100%;
     font-weight: 500;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 30px;
-    background-color: var(--green);
-    width: 150px;
+    background-color: black;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    color: var(--green);
     border-radius: 5px;
+  }
+
+  nav .s3 ul li:hover {
     color: white;
   }
   nav .s3 .s32 svg {
+    color: var(--green);
+  }
+  nav .s3 .s32 svg:hover {
     color: white;
   }
   nav #dropdown-basic {
-    color: white;
+    color: var(--green);
+  }
+  nav #dropdown-basic:hover {
+    color:white;
   }
 }

@@ -108,24 +108,8 @@ const Navbar = ({ reloadNavbar }) => {
         <Link className="stylenone" to="/contact">
           <a href="/contact">Contact</a>
         </Link>
-        <Dropdown>
-          <Dropdown.Toggle variant="" id="dropdown-basic">
-            Categories
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-        <Dropdown>
-          <Dropdown.Toggle variant="" id="dropdown-basic">
-            Categories
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+        
+      
 
         <Dropdown>
           <Dropdown.Toggle variant="" id="dropdown-basic">
@@ -160,30 +144,30 @@ const Navbar = ({ reloadNavbar }) => {
               />
             </svg>
           </div>
-            <div className="searchbar">
-              <input
-                type="text"
-                placeholder="Search for products and category"
-                name=""
-                id=""
-              />
-              <button>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                  />
-                </svg>
-              </button>
-            </div>
+          <div className="searchbar">
+            <input
+              type="text"
+              placeholder="Search for products and category"
+              name=""
+              id=""
+            />
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
           <div className="s32">
             <ul>
               <li>
@@ -258,7 +242,9 @@ const Navbar = ({ reloadNavbar }) => {
                     <Dropdown.Menu>
                       <Dropdown.Item href="/login">Login</Dropdown.Item>
                       <Dropdown.Item href="/signup">Signup</Dropdown.Item>
-                      <Dropdown.Item href="/profile">Profile</Dropdown.Item>
+                      <Dropdown.Item href="/user/yourorders">
+                        Your orders
+                      </Dropdown.Item>
                       <Dropdown.Item href="/logout">Logout</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>

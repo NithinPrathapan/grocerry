@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
-  orderSuccess: true,
+  orderSuccess: false,
 };
 
 const orderSuccessSlice = createSlice({

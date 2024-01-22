@@ -118,14 +118,14 @@ const OrderSuccessful = ({ orderId, message }) => {
           </div>
         </div>
         <div className="c3">
-          <table>
+          <table className="ordersuccessfulltable">
             <thead>
               <tr>
-                <th>Sno</th>
-                <th>Product</th>
+                <th>S.No</th>
+                <th>Name</th>
                 <th>Price</th>
-                <th>Quantity</th>
-                <th>Total Price</th>
+                <th>Count</th>
+                <th>Total</th>
               </tr>
             </thead>
             <tbody>
@@ -133,11 +133,21 @@ const OrderSuccessful = ({ orderId, message }) => {
                 orderData.orderItems.map((item, index) => {
                   return (
                     <tr key={index}>
-                      <td>{index + 1}</td>
-                      <td>{item.ProductName}</td>
-                      <td>${item.Price}</td>
-                      <td>{item.Quantity}</td>
-                      <td>${item.Price * item.Quantity}</td>
+                      <td>
+                        <p> {index + 1}</p>
+                      </td>
+                      <td>
+                        <p> {item.ProductName}</p>
+                      </td>
+                      <td>
+                        <p> ${item.Price}</p>
+                      </td>
+                      <td>
+                        <p> {item.Quantity}</p>
+                      </td>
+                      <td>
+                        <p> ${item.Price * item.Quantity}</p>
+                      </td>
                     </tr>
                   );
                 })}
@@ -147,19 +157,19 @@ const OrderSuccessful = ({ orderId, message }) => {
         <div className="totalcont">
           <p>
             {" "}
-            Shipping Charge : ${""} {orderData.shippingCharges}
+            Shipping Charge : ${""} <p>{orderData.shippingCharges}</p>
           </p>
           <p>
             {" "}
-            Tax : ${""} {orderData.tax}
+            Tax : ${""} <p>{orderData.tax}</p>
           </p>
           <p>
             {" "}
-            Sub total : ${""} {orderData.Subtotal}
+            Sub total : ${""} <p>{orderData.Subtotal}</p>
           </p>
           <p>
             {" "}
-            Total : ${""} {orderData.total}
+            Total : ${""} <p>{orderData.total}</p>
           </p>
         </div>
       </div>

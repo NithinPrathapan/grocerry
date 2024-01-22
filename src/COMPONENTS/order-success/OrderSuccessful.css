@@ -67,14 +67,14 @@
   height: 100px;
   color: var(--green);
 }
-.confirmationcont .c1 h2{
+.confirmationcont .c1 h2 {
   font-size: 1.5rem;
   font-weight: 600;
   color: black;
   margin: 10px;
 }
 
-.confirmationcont .c2{
+.confirmationcont .c2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,35 +83,35 @@
   padding: 20px;
   width: 100%;
 }
-.confirmationcont .c2 h2{
+.confirmationcont .c2 h2 {
   width: 100%;
   font-size: 1.5rem;
   color: var(--green);
   margin-top: 10px;
   width: 100%;
 }
-.confirmationcont .c2 div{
+.confirmationcont .c2 div {
   display: flex;
   width: 45%;
   justify-content: space-between;
   align-items: center;
 }
-.confirmationcont .c2 p{
+.confirmationcont .c2 p {
   width: 45%;
 }
 
-.confirmationcont .c2 div p:first-child{
+.confirmationcont .c2 div p:first-child {
   font-weight: 300;
   color: var(--gray);
   font-size: 15px;
 }
 
-.confirmationcont .c2 div p:last-child{
+.confirmationcont .c2 div p:last-child {
   font-weight: 600;
   color: var(--gray);
   font-size: 15px;
 }
-.confirmationcont .totalcont{
+.confirmationcont .totalcont {
   display: flex;
   justify-content: space-between;
   align-items: left;
@@ -120,4 +120,67 @@
   padding: 20px;
   border-top: 1px solid var(--green);
   text-align: left;
+}
+.confirmationcont .totalcont p {
+  display: flex;
+}
+.confirmationcont .c3 table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.confirmationcont .c3 table thead tr {
+  background: var(--green);
+  color: white;
+}
+.confirmationcont .c3 table thead tr th {
+  padding: 10px 10px;
+  font-size: 15px;
+  font-weight: 300;
+}
+.confirmationcont .c3 table tr td {
+  padding: 10px 10px;
+  font-size: 15px;
+  font-weight: 300;
+}
+.confirmationcont .c3 table p {
+  margin: 0;
+  font-size: 15px;
+}
+
+@media (max-width: 700px) {
+  .confirmationcont .c3 table {
+    margin: 0;
+    padding: 0;
+  }
+  .confirmationcont .c3 table thead tr th {
+    font-size: 12px;
+    text-align: center;
+    padding: 0;
+  }
+  .confirmationcont .c3 table p {
+    font-size: 10px;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .confirmationcont .totalcont {
+    font-size: 12px;
+    padding: 20px;
+  }
+  .confirmationcont .totalcont p {
+    display: flex;
+    justify-content: space-between;
+  }
+  .confirmationcont .c2 div {
+    width: 100%;
+  }
+  .ordersuccessful .confirmationcont .c2 div p {
+    font-size: 10px;
+  }
+}
+.confirmationcont .c2 h2 {
+  margin: 10px 0;
+  font-weight: 500;
 }

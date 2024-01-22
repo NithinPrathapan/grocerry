@@ -10,6 +10,7 @@
   border-radius: 10px;
   margin: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+  min-height: 50vh;
 }
 .ordersuccessfull svg {
   width: 100px;
@@ -19,4 +20,16 @@
   color: var(--green);
 }
 
-
+@media (max-width: 900px) {
+  .ordersuccessfull {
+    width: 96%;
+    min-height: 50vh;
+  }
+  .ordersuccessfull h2 {
+    font-size: 20px;
+  }
+  .ordersuccessfull p , .ordersuccessfull span {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}

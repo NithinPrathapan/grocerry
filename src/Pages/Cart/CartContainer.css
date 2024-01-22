@@ -93,3 +93,51 @@
 .cartcont table .cartitemrow {
   border-bottom: 1px solid #d4c7c7;
 }
+
+@media (max-width: 900px) {
+  .cartcont {
+    width: 95%;
+  }
+  .cartcont table .cartitemrow td {
+    font-size: 14px;
+  }
+  .cartcont .cartProduct {
+    width: fit-content;
+  }
+}
+@media (max-width: 600px) {
+  .cartcont .carttable thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table {
+    width: 100%;
+  }
+  table tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .carttable td {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 100%;
+  }
+  .carttable .quantity {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

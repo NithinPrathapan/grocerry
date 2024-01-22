@@ -23,7 +23,7 @@ const ProductPage = () => {
   const [Rating, setRating] = useState(0);
 
   //dummy products
- 
+
   //add to cart function on click add to cart button
   // ! *************************************************
   const addToCart = async () => {
@@ -205,7 +205,7 @@ const ProductPage = () => {
               <div
                 onClick={() => {
                   setactiveimg(item);
-                }} 
+                }}
                 className="imgsmall"
               >
                 <img
@@ -493,7 +493,6 @@ const ProductPage = () => {
                   return (
                     <div className="review">
                       <div className="reviewhead">
-                        <p className="name">{item.Name}</p>
                         <div className="rating1">
                           <div className="star">
                             {item.Rating >= 1 ? (
@@ -662,6 +661,8 @@ const ProductPage = () => {
                             )}
                           </div>
                         </div>
+                        <p className="name">{item.Name}</p>
+
                         <p className="date">{item.Date}</p>
                       </div>
                       <div className="reviewbody">{item.Review}</div>

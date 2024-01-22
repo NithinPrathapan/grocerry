@@ -73,7 +73,7 @@ const YourOrders = () => {
         />
       )}
       <h1 className="mainhead1">Your Orders</h1>
-      <table>
+      <table className="yourorderstable">
         <thead>
           <tr>
             <th scope="col">Order Id</th>

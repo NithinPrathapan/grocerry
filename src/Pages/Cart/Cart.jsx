@@ -292,11 +292,11 @@ const Cart = () => {
               <table className="carttable">
                 <thead>
                   <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Total</th>
-                    <th>Remove</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Remove</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -305,7 +305,7 @@ const Cart = () => {
                     console.log(index, "index");
                     return (
                       <tr key={index} className="cartitemrow">
-                        <td>
+                        <td data-label="Product">
                           <div
                             onClick={() => {
                               window.location.href = `product/${item.productdata.ProductId}`;
@@ -319,44 +319,46 @@ const Cart = () => {
                             <p>{item.productdata.ProductName}</p>
                           </div>
                         </td>
-                        <td className="quantity">
-                          <button
-                            onClick={() => {
-                              let newCartData = [...cartData];
-                              if (newCartData[index].quantity > 1) {
-                                newCartData[index].quantity -= 1;
-                              }
-                              setCartData(newCartData);
-                              localStorage.setItem(
-                                "cart",
-                                JSON.stringify(newCartData)
-                              );
-                              getCartData();
-                            }}
-                            className="minus"
-                          >
-                            -
-                          </button>
-                          <span>{item.quantity}</span>
-                          <button
-                            onClick={() => {
-                              let newCartData = [...cartData];
-                              if (newCartData[index].quantity >= 1) {
-                                newCartData[index].quantity += 1;
-                              }
-                              setCartData(newCartData);
-                              localStorage.setItem(
-                                "cart",
-                                JSON.stringify(newCartData)
-                              );
-                              getCartData();
-                            }}
-                            className="plus"
-                          >
-                            +
-                          </button>
+                        <td data-label="Quantity" className="quantity">
+                          <div className="quantity">
+                            <button
+                              onClick={() => {
+                                let newCartData = [...cartData];
+                                if (newCartData[index].quantity > 1) {
+                                  newCartData[index].quantity -= 1;
+                                }
+                                setCartData(newCartData);
+                                localStorage.setItem(
+                                  "cart",
+                                  JSON.stringify(newCartData)
+                                );
+                                getCartData();
+                              }}
+                              className="minus"
+                            >
+                              -
+                            </button>
+                            <span>{item.quantity}</span>
+                            <button
+                              onClick={() => {
+                                let newCartData = [...cartData];
+                                if (newCartData[index].quantity >= 1) {
+                                  newCartData[index].quantity += 1;
+                                }
+                                setCartData(newCartData);
+                                localStorage.setItem(
+                                  "cart",
+                                  JSON.stringify(newCartData)
+                                );
+                                getCartData();
+                              }}
+                              className="plus"
+                            >
+                              +
+                            </button>
+                          </div>
                         </td>
-                        <td className="price">
+                        <td data-label="Price" className="price">
                           <p>
                             {" "}
                             $
@@ -365,7 +367,7 @@ const Cart = () => {
                               : 0}
                           </p>
                         </td>
-                        <td className="total">
+                        <td data-label="Total" className="total">
                           <p>
                             {" "}
                             $
@@ -374,7 +376,7 @@ const Cart = () => {
                             ).toFixed(2)}
                           </p>
                         </td>
-                        <td>
+                        <td data-label="Remove">
                           <div
                             onClick={() => {
                               removeItemFromCart(index);
@@ -507,7 +509,7 @@ const Cart = () => {
                 </div>
               )}
             </div>
-            <h3>OR</h3>
+            <h2 className="mainhead1">OR</h2>
             <div className="shippingadd">
               <input type="text" placeholder="Address Line 1" />
               <input type="text" placeholder="Address Line 2" />
@@ -573,6 +575,10 @@ const Cart = () => {
               />
             </svg>
             <h2 className="mainhead1">Order Placed Successfully</h2>
+            <p>Thank you for shopping with us</p>
+            <p>
+              Order ID : <span>32567</span>
+            </p>
           </div>
         )}
         {active === 1 && cartData.length > 0 && (

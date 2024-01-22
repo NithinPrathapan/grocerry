@@ -36,6 +36,7 @@
 }
 .paymentagreement {
   display: flex;
+  align-items: center;
   gap: 10px;
   margin: 10px;
 }
@@ -53,4 +54,21 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.245);
   padding: 10px;
+}
+
+@media (max-width: 900px) {
+  .paymentcont {
+    width: 95%;
+  }
+  .paymentcont h2 {
+    font-size: 20px;
+  }
+  .paymenttypes .c1 {
+    width: 25%;
+  }
+}
+@media (max-width: 600px) {
+  .paymentagreement label {
+    font-size: 12px;
+  }
 }
