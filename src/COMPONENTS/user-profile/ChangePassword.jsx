@@ -9,7 +9,7 @@ const ChangePassword = () => {
           <label htmlFor="opassword">
             Old Password <span>*</span>
           </label>
-          <input type="text" name="opassword" id="" />
+          <input type="text" name="opassword"  id="" />
         </div>
         <div className="form-group">
           <label htmlFor="npassword">

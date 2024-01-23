@@ -3,17 +3,21 @@
   height: 40px;
 }
 .category_sidebar {
-  width: 20%;
+  min-width: 200px;
+  max-width: 200px;
   display: flex;
   flex-direction: column;
   border: 1px solid #cecece;
+  padding: 2px;
+  max-height: 100%;
 }
 .category_sidebar .category {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
+  max-width: 200px;
   padding: 10px;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   border: 1px solid #cecece;
   gap: 10px;

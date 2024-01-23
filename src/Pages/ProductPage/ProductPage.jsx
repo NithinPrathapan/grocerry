@@ -12,8 +12,13 @@ import ProductSlider from "../../COMPONENTS/Product-slider/ProductSlider";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { data } from "../../data/data";
+import { useSelector } from "react-redux";
 
 const ProductPage = () => {
+  const jsonString = localStorage.getItem("product");
+  const product = JSON.parse(jsonString);
+  console.log(product);
+
   const [reloadNavbar, setReloadNavbar] = useState(true);
   const [imageset, setimageset] = React.useState([]);
   const [productdata, setproductdata] = React.useState([]);
@@ -24,6 +29,9 @@ const ProductPage = () => {
 
   //dummy products
 
+  const resetLocalStorageProduct = () => {
+    localStorage.removeItem("product");
+  };
   //add to cart function on click add to cart button
   // ! *************************************************
   const addToCart = async () => {
@@ -155,9 +163,9 @@ const ProductPage = () => {
       ],
     };
     if (temp.Code === 200) {
-      setimageset(temp.Data[0].ProductImage);
-      setproductdata(temp.Data[0]);
-      setactiveimg(temp.Data[0].ProductImage[0]);
+      setimageset(product.data.ProductImage);
+      setproductdata(product.data);
+      setactiveimg(product.data.ProductImage[0]);
     }
   };
   useEffect(() => {
@@ -181,7 +189,7 @@ const ProductPage = () => {
       />
       <div className="pc1">
         <Link to="/">
-          <button className="goback">
+          <button className="goback" onClick={resetLocalStorageProduct}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -221,7 +229,7 @@ const ProductPage = () => {
           </div>
         </div>
         <div className="c12">
-          <h1 className="head">{productdata.ProductName}</h1>
+          <h1 className="head">{product.data.ProductName}</h1>
           <div className="c121">
             <p className="price">
               ${productdata.SalesPrice * count}

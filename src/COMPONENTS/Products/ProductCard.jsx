@@ -3,11 +3,14 @@ import "./ProductCard.css";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useDispatch } from "react-redux";
+import { saveProductData } from "../../redux/ProductSlice";
 
 const ProductCard = ({ data }) => {
   const [show, setShow] = useState(false);
   const [count, setCount] = useState(1);
-
+  const [item, setItem] = useState({data});
+  const dispatch = useDispatch();
   const addToCart = async () => {
     let productdata = data;
     let cart = await JSON.parse(localStorage.getItem("cart"));
@@ -54,9 +57,12 @@ const ProductCard = ({ data }) => {
     });
   };
 
+  const storeData = () => {
+    dispatch(saveProductData(item));
+  };
   return (
     <div className="product-card">
-      <div className="s1">
+      <div className="s1" onClick={storeData}>
         <Link to={`product/${data.ProductId}`} className="stylenone">
           <img src={data.ProductImage[0].image} alt="noimage" />
         </Link>

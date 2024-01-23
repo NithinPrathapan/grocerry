@@ -10,47 +10,47 @@ const CateorySidebar = () => {
     {
       id: 1,
       categoryImage: clip1,
-      categoryName: "Category 1",
+      categoryName: "Vegitable",
     },
     {
       id: 2,
       categoryImage: clip2,
-      categoryName: "Category 1",
+      categoryName: "Kitchen Items",
     },
     {
       id: 3,
       categoryImage: clip3,
-      categoryName: "Category 1",
+      categoryName: "Curry Powders",
     },
     {
       id: 4,
       categoryImage: clip4,
-      categoryName: "Category 1",
+      categoryName: "Spoon",
     },
     {
       id: 1,
       categoryImage: clip1,
-      categoryName: "Category 1",
+      categoryName: "Glasses",
     },
     {
       id: 5,
       categoryImage: clip1,
-      categoryName: "Category 1",
+      categoryName: "Fruits",
     },
     {
       id: 6,
       categoryImage: clip2,
-      categoryName: "Category 6",
+      categoryName: "Sauce",
     },
     {
       id: 7,
       categoryImage: clip3,
-      categoryName: "Category 7",
+      categoryName: "Cutting tools",
     },
     {
       id: 8,
       categoryImage: clip4,
-      categoryName: "Category 8",
+      categoryName: "Drinks",
     },
   ];
   return (
