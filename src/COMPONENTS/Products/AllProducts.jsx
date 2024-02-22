@@ -6,7 +6,7 @@ import { data } from "../../data/data.js";
 const AllProducts = () => {
   const products = data;
   return (
-    <div className="allproducts">
+    <div id="allproducts" className="allproducts">
       <h1>All Products</h1>
       <div className="products">
         {products.map((item, index) => {

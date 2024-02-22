@@ -25,7 +25,9 @@ const Navbar = ({ reloadNavbar }) => {
   return (
     <nav>
       <div className="s1">
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
         <div className="searchbar">
           <input
             type="text"
@@ -108,8 +110,6 @@ const Navbar = ({ reloadNavbar }) => {
         <Link className="stylenone" to="/contact">
           <a href="/contact">Contact</a>
         </Link>
-        
-      
 
         <Dropdown>
           <Dropdown.Toggle variant="" id="dropdown-basic">

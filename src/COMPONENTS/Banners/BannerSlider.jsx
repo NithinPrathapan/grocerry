@@ -28,6 +28,11 @@ const BannerSlider = () => {
       button: "www.google.com",
     },
   ];
+  const scrollToBottom = () => {
+    document
+      .getElementById("allproducts")
+      .scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="bannerslider">
       <Slider {...settings}>
@@ -38,7 +43,7 @@ const BannerSlider = () => {
               <div className="content">
                 <h1>{item.title}</h1>
                 <span>{item.description}</span>
-                <button>Shop more</button>
+                <button onClick={scrollToBottom}>View Products</button>
               </div>
             </div>
           );
