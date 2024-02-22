@@ -1,55 +1,59 @@
 import React from "react";
 import "./CategorySidebar.css";
-import clip1 from "../../Assets/images/clip1.png";
-import clip2 from "../../Assets/images/clip2.png";
-import clip3 from "../../Assets/images/clip3.png";
-import clip4 from "../../Assets/images/clip4.png";
+import vegitable from "../../Assets/images/vegitable.png";
+import kitchen from "../../Assets/images/kitchen.png";
+import curry from "../../Assets/images/curry.png";
+import fruits from "../../Assets/images/fruits.png";
+import glasses from "../../Assets/images/glasses.png";
+import spoon from "../../Assets/images/spoon.png";
+import sauce from "../../Assets/images/sauce.png";
+import drinks from "../../Assets/images/drinks.png";
 
 const CateorySidebar = () => {
   const data = [
     {
       id: 1,
-      categoryImage: clip1,
+      categoryImage: vegitable,
       categoryName: "Vegitable",
     },
     {
       id: 2,
-      categoryImage: clip2,
+      categoryImage: kitchen,
       categoryName: "Kitchen Items",
     },
     {
       id: 3,
-      categoryImage: clip3,
+      categoryImage: curry,
       categoryName: "Curry Powders",
     },
     {
       id: 4,
-      categoryImage: clip4,
+      categoryImage: spoon,
       categoryName: "Spoon",
     },
     {
       id: 1,
-      categoryImage: clip1,
+      categoryImage: glasses,
       categoryName: "Glasses",
     },
     {
       id: 5,
-      categoryImage: clip1,
+      categoryImage: fruits,
       categoryName: "Fruits",
     },
     {
       id: 6,
-      categoryImage: clip2,
+      categoryImage: sauce,
       categoryName: "Sauce",
     },
     {
       id: 7,
-      categoryImage: clip3,
+      categoryImage: curry,
       categoryName: "Cutting tools",
     },
     {
       id: 8,
-      categoryImage: clip4,
+      categoryImage: drinks,
       categoryName: "Drinks",
     },
   ];
