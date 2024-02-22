@@ -9,9 +9,11 @@ import { saveProductData } from "../../redux/ProductSlice";
 const ProductCard = ({ data }) => {
   const [show, setShow] = useState(false);
   const [count, setCount] = useState(1);
-  const [item, setItem] = useState({data});
+  const [item, setItem] = useState({ data });
   const dispatch = useDispatch();
   const addToCart = async () => {
+    window.location.reload();
+    toast.success("Added to cart");
     let productdata = data;
     let cart = await JSON.parse(localStorage.getItem("cart"));
     if (cart) {
@@ -51,10 +53,6 @@ const ProductCard = ({ data }) => {
     }
     // setReloadNavbar(!reloadNavbar);
     localStorage.setItem("cart", JSON.stringify(cart));
-    toast.success("Added to cart", {
-      position: toast.POSITION.TOP_RIGHT,
-      autoClose: 3000, // Set the duration for the notification to be displayed
-    });
   };
 
   const storeData = () => {
